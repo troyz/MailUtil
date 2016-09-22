@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MailUtil_Example' do
+  pod 'MailUtil', :path => '../'
+
+  target 'MailUtil_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
