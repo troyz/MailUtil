@@ -1,0 +1,6 @@
+framework module MailUtil {
+  umbrella header "MailUtil-umbrella.h"
+
+  export *
+  module * { export * }
+}

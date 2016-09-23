@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+        <style type="text/css">
+            *{font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;}
+            body{margin: 7px 14px 7px 14px;}
+            .title{font-size: 16px; text-align: center; margin: 10px; color: #2a2a2a;}
+            .hDiv{font-size: 13px; height:20px; margin-bottom: 10px; color: #666666;}
+            .leftDiv{float: left;}
+            .rightDiv{float: right;}
+            .contentDiv{font-size: 13px; line-height: 170%; color: #666666; font-weight: thin;}
+            .contentDiv img{max-width: 100%;}
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                $("img").load(function()
+                {
+                    if($(this).width() > 50)
+                    {
+                        $(this).attr("width", "100%");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="title">${title}</div>
+        <div class="hDiv">
+            <div class="leftDiv">作者: ${uname}</div>
+            <div class="rightDiv">时间: ${post_time}</div>
+        </div>
+        <div class="contentDiv">
+            ${mp_content}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+PODS:
+  - MailUtil (0.1.0):
+    - MailUtil/skpsmtpmessage (= 0.1.0)
+  - MailUtil/skpsmtpmessage (0.1.0)
+
+DEPENDENCIES:
+  - MailUtil (from `../`)
+
+EXTERNAL SOURCES:
+  MailUtil:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MailUtil: 0fe789d76eb45909fc685557d340d06a373e70b1
+
+PODFILE CHECKSUM: 01ec5c69f13b61958feaabbf2ec0c7d79b5f5a92
+
+COCOAPODS: 1.1.0.rc.2

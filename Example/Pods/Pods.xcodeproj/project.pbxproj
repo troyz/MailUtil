@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02A37C99F29AE9CD578129757A25AC6F /* Pods-MailUtil_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A1BCBB8590B90BDADC319B5D7CB32E /* Pods-MailUtil_Example-dummy.m */; };
+		0B192C5041CC176411D5AFCB95B731D9 /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFE285610C1ECFB2E1A593A64A87A1 /* NSStream+SKPSMTPExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1689D836D18C83E2413FD1F43972B5FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DC3D8EFEFCB57DD743BA66A83A5F6 /* Foundation.framework */; };
+		202D496591DF05FDB413726BB24715B3 /* HSK_CFUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = F6193330C3CDFCC2B0ECD0B2BEBC4B9C /* HSK_CFUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20C317F72AD91BDE935D476BDD483F0F /* NSData+Base64Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = C098897E4C39BD4AAB209165731C6A70 /* NSData+Base64Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DE2FDAA31D2053051A040031DC2E384 /* SendEmailOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9551F1B0FB33688C7F0294755D10C4C0 /* SendEmailOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36690E77B49EF3DA305AD42828439813 /* ConcurrentOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F9A5E96CF7558A1AA9754F0DC264433 /* ConcurrentOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3881F5D836D5CA1390DAAAC0EF4D048B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DC3D8EFEFCB57DD743BA66A83A5F6 /* Foundation.framework */; };
+		63D5DEC6D828964F6DD538DA467A734D /* SKPSMTPMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A51ECCA81F7871F9410757E2ECF1CA /* SKPSMTPMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F89316AD0DFA0DFEB3469219D994BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4DC3D8EFEFCB57DD743BA66A83A5F6 /* Foundation.framework */; };
+		723F9052F3D34196C2406384FF2E4C6D /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 005E3DCD67E1F1D130DDB7A6D4B8FAEA /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84983885EC3864133DB2BDCC6414932C /* MailUtil-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2B5563035BBE8992FA1B9C53F341D13 /* MailUtil-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC08C1687FC98EC5BE9B23E4CDC8FC48 /* Pods-MailUtil_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B55DD2D43A7DE7162F5BD7E9F03753 /* Pods-MailUtil_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C49496E62725BD8B0BD7745C4B81A29D /* Pods-MailUtil_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C8DF821A99944C1FECDF2A2F03C1DD /* Pods-MailUtil_Tests-dummy.m */; };
+		CA19171653F39AC1CBEFE6522E597D29 /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 951387E745AB31AFB84A444814EE3FD2 /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEC73DB52AA82B9077598EF0B6A6F196 /* NSStream+SKPSMTPExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = D70F85D3F7C8A8258E2A9CD11DDC72FD /* NSStream+SKPSMTPExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D31413A71080A00ADBC67C885E7189C8 /* MailUtil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B72F2C5B9F202D99FDCF32E7EBA837A9 /* MailUtil-dummy.m */; };
+		D79C55E7B40C06512987C709AEBBB7B6 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C75B2733BD6DA7F81B7112CBA000E51 /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D90271121D8D6C743E8891258891A532 /* Pods-MailUtil_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42784AABC5CF07318D5CE4D8D990DB3E /* Pods-MailUtil_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4DE27611B0EEBC60727469BEDDDC1E0 /* MailUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF3DDBEE2F3D0161E6343F57503DCFA /* MailUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA95E4530F08E49D71E13708AEE0FA55 /* SendEmailOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 530E1990B3015108BE3D9ABE1B53B013 /* SendEmailOperation.m */; };
+		ED190B6DA6849751254E0137ED63F95F /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6C90B33BA70F16F9F606210174545 /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F00F9C779431E03B56EA255086D3DE89 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232CC40B6BDED99579A8A76AF55C1F9B /* CFNetwork.framework */; };
+		F559A8D5D5A66FE609616A5C1D4811A2 /* Base64Transcoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB6C961A6B82CB11C55FEB31D6D771F /* Base64Transcoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F58FEAF4794DB5B3BD657550DF2D837F /* ConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9CEC8844F08E6867FA8E282279ED91 /* ConcurrentOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7225F32199AE098566C2A7FB6E897962 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73D7C79F95CE757461568B92A1095ED7;
+			remoteInfo = MailUtil;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005E3DCD67E1F1D130DDB7A6D4B8FAEA /* Base64Transcoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
+		0ADDA5802E69D1CDA213A016F734AED4 /* Pods-MailUtil_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MailUtil_Tests.modulemap"; sourceTree = "<group>"; };
+		0BDEEE5A9510AC5ED913392AB4EA46B4 /* Pods-MailUtil_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MailUtil_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		0C47789396A7B60273DCDF876765F1CC /* MailUtil.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MailUtil.xcconfig; sourceTree = "<group>"; };
+		11FC5F00B6B00057A61FDD0F285D9505 /* Pods-MailUtil_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MailUtil_Tests-resources.sh"; sourceTree = "<group>"; };
+		1B0ACF559263F439FD9939EF7B9263F6 /* Pods-MailUtil_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MailUtil_Example.modulemap"; sourceTree = "<group>"; };
+		232CC40B6BDED99579A8A76AF55C1F9B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		29AC7F674C3B0F6DB64FC8F5D429AD1F /* Pods-MailUtil_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MailUtil_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3C75B2733BD6DA7F81B7112CBA000E51 /* NSData+Base64Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		3F5A64557613C1C42A643AC328B264AE /* Pods-MailUtil_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MailUtil_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		42784AABC5CF07318D5CE4D8D990DB3E /* Pods-MailUtil_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MailUtil_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4549634F33D7C827D6B64E39DA6D8492 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49BB9F3C6E562C3EE81F34A6E6ADCFA4 /* Pods_MailUtil_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MailUtil_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB6C961A6B82CB11C55FEB31D6D771F /* Base64Transcoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		51A9730CC404953CBE57648F0305FA68 /* Pods-MailUtil_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MailUtil_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		530E1990B3015108BE3D9ABE1B53B013 /* SendEmailOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SendEmailOperation.m; sourceTree = "<group>"; };
+		59A51ECCA81F7871F9410757E2ECF1CA /* SKPSMTPMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
+		62B55DD2D43A7DE7162F5BD7E9F03753 /* Pods-MailUtil_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MailUtil_Example-umbrella.h"; sourceTree = "<group>"; };
+		8FA6C90B33BA70F16F9F606210174545 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
+		9333C97902F719487D4D8D61EA8B6E37 /* Pods-MailUtil_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MailUtil_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		951387E745AB31AFB84A444814EE3FD2 /* HSK_CFUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HSK_CFUtilities.m; sourceTree = "<group>"; };
+		9551F1B0FB33688C7F0294755D10C4C0 /* SendEmailOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SendEmailOperation.h; sourceTree = "<group>"; };
+		99C60014D027ED4D9D1A1FEC3C708ECB /* Pods-MailUtil_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MailUtil_Example-resources.sh"; sourceTree = "<group>"; };
+		9F9A5E96CF7558A1AA9754F0DC264433 /* ConcurrentOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ConcurrentOperation.h; sourceTree = "<group>"; };
+		A4DFBF2893853BC13494ECB07FC809DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABBE3B08B9C3689DC7DF6C12AD5E3857 /* MailUtil-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MailUtil-prefix.pch"; sourceTree = "<group>"; };
+		B72F2C5B9F202D99FDCF32E7EBA837A9 /* MailUtil-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MailUtil-dummy.m"; sourceTree = "<group>"; };
+		B75B07B0A45ABA1069E27BE65033DC4C /* Pods-MailUtil_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MailUtil_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BACFD66A5BECB34DE51FB062D05B51F4 /* Pods-MailUtil_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MailUtil_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC2FE8EA31D52CFC1E860FF872A485E1 /* Pods-MailUtil_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MailUtil_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BC4DC3D8EFEFCB57DD743BA66A83A5F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BFE23B689724DA836686030ED88A02E3 /* MailUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MailUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C098897E4C39BD4AAB209165731C6A70 /* NSData+Base64Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		C2FFE285610C1ECFB2E1A593A64A87A1 /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		D70F85D3F7C8A8258E2A9CD11DDC72FD /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		DA9CEC8844F08E6867FA8E282279ED91 /* ConcurrentOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ConcurrentOperation.m; sourceTree = "<group>"; };
+		E0C8DF821A99944C1FECDF2A2F03C1DD /* Pods-MailUtil_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MailUtil_Tests-dummy.m"; sourceTree = "<group>"; };
+		E43E464C559232D23EFB33F83B9569FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E481FFFF5BEDB38A6A709D23AB0E4075 /* Pods-MailUtil_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MailUtil_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E9A1BCBB8590B90BDADC319B5D7CB32E /* Pods-MailUtil_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MailUtil_Example-dummy.m"; sourceTree = "<group>"; };
+		ECFE84D6488A6BF377D6843FAD670744 /* Pods_MailUtil_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MailUtil_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF3DDBEE2F3D0161E6343F57503DCFA /* MailUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MailUtil.h; sourceTree = "<group>"; };
+		F0A3F521F4F97352933BF3B042B01F1A /* Pods-MailUtil_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MailUtil_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F2B5563035BBE8992FA1B9C53F341D13 /* MailUtil-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MailUtil-umbrella.h"; sourceTree = "<group>"; };
+		F6193330C3CDFCC2B0ECD0B2BEBC4B9C /* HSK_CFUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
+		FB220C8BF13410E7D738B5D0F7BC324C /* MailUtil.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MailUtil.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B16A709F2062ED0630C5B18C387D82D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3881F5D836D5CA1390DAAAC0EF4D048B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A2A76B05CD75102A9B274E68692F952 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00F9C779431E03B56EA255086D3DE89 /* CFNetwork.framework in Frameworks */,
+				6F89316AD0DFA0DFEB3469219D994BAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5CEDAE5D99E49EAA4F87D6055C18225 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1689D836D18C83E2413FD1F43972B5FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		092CD1A10C3BFD9C6EB12A06239C9581 /* skpsmtpmessage */ = {
+			isa = PBXGroup;
+			children = (
+				1C97CB75C26F578035D6829941C941F1 /* MailUtil */,
+			);
+			name = skpsmtpmessage;
+			sourceTree = "<group>";
+		};
+		0AEF648170DA139A3102A9B4D8407437 /* Pods-MailUtil_Example */ = {
+			isa = PBXGroup;
+			children = (
+				A4DFBF2893853BC13494ECB07FC809DA /* Info.plist */,
+				1B0ACF559263F439FD9939EF7B9263F6 /* Pods-MailUtil_Example.modulemap */,
+				3F5A64557613C1C42A643AC328B264AE /* Pods-MailUtil_Example-acknowledgements.markdown */,
+				BACFD66A5BECB34DE51FB062D05B51F4 /* Pods-MailUtil_Example-acknowledgements.plist */,
+				E9A1BCBB8590B90BDADC319B5D7CB32E /* Pods-MailUtil_Example-dummy.m */,
+				B75B07B0A45ABA1069E27BE65033DC4C /* Pods-MailUtil_Example-frameworks.sh */,
+				99C60014D027ED4D9D1A1FEC3C708ECB /* Pods-MailUtil_Example-resources.sh */,
+				62B55DD2D43A7DE7162F5BD7E9F03753 /* Pods-MailUtil_Example-umbrella.h */,
+				51A9730CC404953CBE57648F0305FA68 /* Pods-MailUtil_Example.debug.xcconfig */,
+				E481FFFF5BEDB38A6A709D23AB0E4075 /* Pods-MailUtil_Example.release.xcconfig */,
+			);
+			name = "Pods-MailUtil_Example";
+			path = "Target Support Files/Pods-MailUtil_Example";
+			sourceTree = "<group>";
+		};
+		1C97CB75C26F578035D6829941C941F1 /* MailUtil */ = {
+			isa = PBXGroup;
+			children = (
+				D0215F9A7DB7CC29623B2892054322F5 /* Classes */,
+			);
+			path = MailUtil;
+			sourceTree = "<group>";
+		};
+		32F497E7A6BEF7C119BF9453F154DCE9 /* Pods-MailUtil_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4549634F33D7C827D6B64E39DA6D8492 /* Info.plist */,
+				0ADDA5802E69D1CDA213A016F734AED4 /* Pods-MailUtil_Tests.modulemap */,
+				F0A3F521F4F97352933BF3B042B01F1A /* Pods-MailUtil_Tests-acknowledgements.markdown */,
+				29AC7F674C3B0F6DB64FC8F5D429AD1F /* Pods-MailUtil_Tests-acknowledgements.plist */,
+				E0C8DF821A99944C1FECDF2A2F03C1DD /* Pods-MailUtil_Tests-dummy.m */,
+				0BDEEE5A9510AC5ED913392AB4EA46B4 /* Pods-MailUtil_Tests-frameworks.sh */,
+				11FC5F00B6B00057A61FDD0F285D9505 /* Pods-MailUtil_Tests-resources.sh */,
+				42784AABC5CF07318D5CE4D8D990DB3E /* Pods-MailUtil_Tests-umbrella.h */,
+				9333C97902F719487D4D8D61EA8B6E37 /* Pods-MailUtil_Tests.debug.xcconfig */,
+				BC2FE8EA31D52CFC1E860FF872A485E1 /* Pods-MailUtil_Tests.release.xcconfig */,
+			);
+			name = "Pods-MailUtil_Tests";
+			path = "Target Support Files/Pods-MailUtil_Tests";
+			sourceTree = "<group>";
+		};
+		42AD183F0B7DC5A32D03E91F225954F3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				232CC40B6BDED99579A8A76AF55C1F9B /* CFNetwork.framework */,
+				BC4DC3D8EFEFCB57DD743BA66A83A5F6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42AD183F0B7DC5A32D03E91F225954F3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EAAB8BB93BE8569F09E3B928EE513C7 /* MailUtil */ = {
+			isa = PBXGroup;
+			children = (
+				8858A09B02D614204D3D532310A936A6 /* MailUtil */,
+				092CD1A10C3BFD9C6EB12A06239C9581 /* skpsmtpmessage */,
+				6295DB3A4E703FAA45007C948F9EF07A /* Support Files */,
+			);
+			name = MailUtil;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		6295DB3A4E703FAA45007C948F9EF07A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E43E464C559232D23EFB33F83B9569FF /* Info.plist */,
+				FB220C8BF13410E7D738B5D0F7BC324C /* MailUtil.modulemap */,
+				0C47789396A7B60273DCDF876765F1CC /* MailUtil.xcconfig */,
+				B72F2C5B9F202D99FDCF32E7EBA837A9 /* MailUtil-dummy.m */,
+				ABBE3B08B9C3689DC7DF6C12AD5E3857 /* MailUtil-prefix.pch */,
+				F2B5563035BBE8992FA1B9C53F341D13 /* MailUtil-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MailUtil";
+			sourceTree = "<group>";
+		};
+		68D38E696B5EF09B0E8D7EDACEADBDE4 /* skpsmtpmessage */ = {
+			isa = PBXGroup;
+			children = (
+				4BB6C961A6B82CB11C55FEB31D6D771F /* Base64Transcoder.h */,
+				005E3DCD67E1F1D130DDB7A6D4B8FAEA /* Base64Transcoder.m */,
+				F6193330C3CDFCC2B0ECD0B2BEBC4B9C /* HSK_CFUtilities.h */,
+				951387E745AB31AFB84A444814EE3FD2 /* HSK_CFUtilities.m */,
+				C098897E4C39BD4AAB209165731C6A70 /* NSData+Base64Additions.h */,
+				3C75B2733BD6DA7F81B7112CBA000E51 /* NSData+Base64Additions.m */,
+				D70F85D3F7C8A8258E2A9CD11DDC72FD /* NSStream+SKPSMTPExtensions.h */,
+				C2FFE285610C1ECFB2E1A593A64A87A1 /* NSStream+SKPSMTPExtensions.m */,
+				59A51ECCA81F7871F9410757E2ECF1CA /* SKPSMTPMessage.h */,
+				8FA6C90B33BA70F16F9F606210174545 /* SKPSMTPMessage.m */,
+			);
+			path = skpsmtpmessage;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				B86333E9AD87AF70DC9523F3DF56D8F8 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				A1462F43A1CB6C4286EF32CFF9AE2638 /* Products */,
+				F89E3B08B5CBB91A4C4B3849350571D7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8858A09B02D614204D3D532310A936A6 /* MailUtil */ = {
+			isa = PBXGroup;
+			children = (
+				F1EEB96DB13ED6AD104CD085A0F336EF /* Classes */,
+			);
+			path = MailUtil;
+			sourceTree = "<group>";
+		};
+		A1462F43A1CB6C4286EF32CFF9AE2638 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFE23B689724DA836686030ED88A02E3 /* MailUtil.framework */,
+				ECFE84D6488A6BF377D6843FAD670744 /* Pods_MailUtil_Example.framework */,
+				49BB9F3C6E562C3EE81F34A6E6ADCFA4 /* Pods_MailUtil_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B86333E9AD87AF70DC9523F3DF56D8F8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EAAB8BB93BE8569F09E3B928EE513C7 /* MailUtil */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D0215F9A7DB7CC29623B2892054322F5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68D38E696B5EF09B0E8D7EDACEADBDE4 /* skpsmtpmessage */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F1EEB96DB13ED6AD104CD085A0F336EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9F9A5E96CF7558A1AA9754F0DC264433 /* ConcurrentOperation.h */,
+				DA9CEC8844F08E6867FA8E282279ED91 /* ConcurrentOperation.m */,
+				EDF3DDBEE2F3D0161E6343F57503DCFA /* MailUtil.h */,
+				9551F1B0FB33688C7F0294755D10C4C0 /* SendEmailOperation.h */,
+				530E1990B3015108BE3D9ABE1B53B013 /* SendEmailOperation.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F89E3B08B5CBB91A4C4B3849350571D7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF648170DA139A3102A9B4D8407437 /* Pods-MailUtil_Example */,
+				32F497E7A6BEF7C119BF9453F154DCE9 /* Pods-MailUtil_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		38408C3663D33CB363A62E3F9128E783 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC08C1687FC98EC5BE9B23E4CDC8FC48 /* Pods-MailUtil_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DEC44D9BB0420A97A4BD3F67E11C938 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90271121D8D6C743E8891258891A532 /* Pods-MailUtil_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56DFCE02399E7E3263480C6C5D85B3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F559A8D5D5A66FE609616A5C1D4811A2 /* Base64Transcoder.h in Headers */,
+				36690E77B49EF3DA305AD42828439813 /* ConcurrentOperation.h in Headers */,
+				202D496591DF05FDB413726BB24715B3 /* HSK_CFUtilities.h in Headers */,
+				84983885EC3864133DB2BDCC6414932C /* MailUtil-umbrella.h in Headers */,
+				E4DE27611B0EEBC60727469BEDDDC1E0 /* MailUtil.h in Headers */,
+				20C317F72AD91BDE935D476BDD483F0F /* NSData+Base64Additions.h in Headers */,
+				CEC73DB52AA82B9077598EF0B6A6F196 /* NSStream+SKPSMTPExtensions.h in Headers */,
+				2DE2FDAA31D2053051A040031DC2E384 /* SendEmailOperation.h in Headers */,
+				63D5DEC6D828964F6DD538DA467A734D /* SKPSMTPMessage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4DC507113D3F9E46CDE08BE3636B4F50 /* Pods-MailUtil_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3A03720554B88D32194C4E0298E466B /* Build configuration list for PBXNativeTarget "Pods-MailUtil_Example" */;
+			buildPhases = (
+				5C69D3B6DAF85EAE0C6AD20C68D1FDAB /* Sources */,
+				B5CEDAE5D99E49EAA4F87D6055C18225 /* Frameworks */,
+				38408C3663D33CB363A62E3F9128E783 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DD6B69E4E8C5EDE83DA7092BD638599 /* PBXTargetDependency */,
+			);
+			name = "Pods-MailUtil_Example";
+			productName = "Pods-MailUtil_Example";
+			productReference = ECFE84D6488A6BF377D6843FAD670744 /* Pods_MailUtil_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		73D7C79F95CE757461568B92A1095ED7 /* MailUtil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B7B6D3198AD02E1B2BA81B35A2C09D7 /* Build configuration list for PBXNativeTarget "MailUtil" */;
+			buildPhases = (
+				680884D3DD030001E8A5C5D3C0735AFC /* Sources */,
+				8A2A76B05CD75102A9B274E68692F952 /* Frameworks */,
+				E56DFCE02399E7E3263480C6C5D85B3A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MailUtil;
+			productName = MailUtil;
+			productReference = BFE23B689724DA836686030ED88A02E3 /* MailUtil.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0B9687F361C3B3035EB59A06DE5122A /* Pods-MailUtil_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C9F627C75DC437C59F5DB93646EC9C /* Build configuration list for PBXNativeTarget "Pods-MailUtil_Tests" */;
+			buildPhases = (
+				86B31B6CEA31D03B5B3C515619EF6BE7 /* Sources */,
+				7B16A709F2062ED0630C5B18C387D82D /* Frameworks */,
+				5DEC44D9BB0420A97A4BD3F67E11C938 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MailUtil_Tests";
+			productName = "Pods-MailUtil_Tests";
+			productReference = 49BB9F3C6E562C3EE81F34A6E6ADCFA4 /* Pods_MailUtil_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A1462F43A1CB6C4286EF32CFF9AE2638 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73D7C79F95CE757461568B92A1095ED7 /* MailUtil */,
+				4DC507113D3F9E46CDE08BE3636B4F50 /* Pods-MailUtil_Example */,
+				E0B9687F361C3B3035EB59A06DE5122A /* Pods-MailUtil_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C69D3B6DAF85EAE0C6AD20C68D1FDAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02A37C99F29AE9CD578129757A25AC6F /* Pods-MailUtil_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		680884D3DD030001E8A5C5D3C0735AFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				723F9052F3D34196C2406384FF2E4C6D /* Base64Transcoder.m in Sources */,
+				F58FEAF4794DB5B3BD657550DF2D837F /* ConcurrentOperation.m in Sources */,
+				CA19171653F39AC1CBEFE6522E597D29 /* HSK_CFUtilities.m in Sources */,
+				D31413A71080A00ADBC67C885E7189C8 /* MailUtil-dummy.m in Sources */,
+				D79C55E7B40C06512987C709AEBBB7B6 /* NSData+Base64Additions.m in Sources */,
+				0B192C5041CC176411D5AFCB95B731D9 /* NSStream+SKPSMTPExtensions.m in Sources */,
+				EA95E4530F08E49D71E13708AEE0FA55 /* SendEmailOperation.m in Sources */,
+				ED190B6DA6849751254E0137ED63F95F /* SKPSMTPMessage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86B31B6CEA31D03B5B3C515619EF6BE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C49496E62725BD8B0BD7745C4B81A29D /* Pods-MailUtil_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DD6B69E4E8C5EDE83DA7092BD638599 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MailUtil;
+			target = 73D7C79F95CE757461568B92A1095ED7 /* MailUtil */;
+			targetProxy = 7225F32199AE098566C2A7FB6E897962 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		77198E0BF54574B5ADE5A1A325FA7368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C47789396A7B60273DCDF876765F1CC /* MailUtil.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MailUtil/MailUtil-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MailUtil/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MailUtil/MailUtil.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MailUtil;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7CDF0F7190A17B7EAD2BD36B130913A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2FE8EA31D52CFC1E860FF872A485E1 /* Pods-MailUtil_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MailUtil_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MailUtil_Tests/Pods-MailUtil_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MailUtil_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96FD6D4B03DDB6DA113FA3A36E7E40A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9333C97902F719487D4D8D61EA8B6E37 /* Pods-MailUtil_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MailUtil_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MailUtil_Tests/Pods-MailUtil_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MailUtil_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A75E49902767048EC720C34265161EB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E481FFFF5BEDB38A6A709D23AB0E4075 /* Pods-MailUtil_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MailUtil_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MailUtil_Example/Pods-MailUtil_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MailUtil_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D54DA2233B20993F9424DC9DC90E966C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C47789396A7B60273DCDF876765F1CC /* MailUtil.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MailUtil/MailUtil-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MailUtil/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MailUtil/MailUtil.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MailUtil;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E731843847D87B1006591DD6B3E0A9DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A9730CC404953CBE57648F0305FA68 /* Pods-MailUtil_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MailUtil_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MailUtil_Example/Pods-MailUtil_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MailUtil_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
+				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B7B6D3198AD02E1B2BA81B35A2C09D7 /* Build configuration list for PBXNativeTarget "MailUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77198E0BF54574B5ADE5A1A325FA7368 /* Debug */,
+				D54DA2233B20993F9424DC9DC90E966C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3A03720554B88D32194C4E0298E466B /* Build configuration list for PBXNativeTarget "Pods-MailUtil_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E731843847D87B1006591DD6B3E0A9DE /* Debug */,
+				A75E49902767048EC720C34265161EB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C9F627C75DC437C59F5DB93646EC9C /* Build configuration list for PBXNativeTarget "Pods-MailUtil_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96FD6D4B03DDB6DA113FA3A36E7E40A1 /* Debug */,
+				7CDF0F7190A17B7EAD2BD36B130913A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

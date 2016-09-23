@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MailUtil'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MailUtil.'
+  s.summary          = 'Sending mails with `skpsmtpmessage` in serial order.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,37 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+As you known, `skpsmtpmessage` could not send email in concurrent order. `MailUtil` is a tool that wrap `skpsmtpmessage` to send emails in serial order.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/MailUtil'
+  s.homepage         = 'https://github.com/troyz/MailUtil'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Troy Zhang' => 'java.koma@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/MailUtil.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/troyz/MailUtil.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.requires_arc = true
 
-  s.source_files = 'MailUtil/Classes/**/*'
-  
+  # s.source_files = 'MailUtil/Classes/**/*'
+  s.source_files = 'MailUtil/Classes/*.{h,m}'
+  s.public_header_files = 'MailUtil/Classes/*.h'
+
+  s.subspec 'skpsmtpmessage' do |ss|
+    ss.source_files = 'MailUtil/Classes/skpsmtpmessage/*.{h,m}'
+    ss.public_header_files = 'MailUtil/Classes/skpsmtpmessage/*.h'
+    ss.requires_arc = false
+    ss.frameworks = 'CFNetwork', 'Foundation'
+  end
+
   # s.resource_bundles = {
   #   'MailUtil' => ['MailUtil/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'CFNetwork', 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
+  # s.dependency 'skpsmtpmessage', '~> 0.0.1'
 end
