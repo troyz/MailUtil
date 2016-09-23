@@ -16,6 +16,9 @@
 @property (nonatomic, copy) NSString *body;
 @property (nonatomic, copy) NSString *path;
 
+// 是否在邮件发送成功后删除path对应的文件，默认为NO
+@property (nonatomic, assign) BOOL deleteFileOnCompleted;
+
 // 如果没有设置，则用全局的。
 @property (nonatomic, copy) NSString *mailServer;
 @property (nonatomic, copy) NSString *fromEmail;
@@ -41,5 +44,9 @@
                    subject:(NSString *)subject
                       body:(NSString *)body
                       path:(NSString *)path;
-
+- (instancetype)initWithTo:(NSString *)to
+                   subject:(NSString *)subject
+                      body:(NSString *)body
+                      path:(NSString *)path
+     deleteFileOnCompleted:(BOOL)del;
 @end

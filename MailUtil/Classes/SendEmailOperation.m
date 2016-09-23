@@ -82,6 +82,15 @@ static NSString *globalPassword;
 
 - (instancetype)initWithTo:(NSString *)to subject:(NSString *)subject body:(NSString *)body path:(NSString *)path
 {
+    return [self initWithTo:to subject:subject body:body path:path deleteFileOnCompleted:NO];
+}
+
+- (instancetype)initWithTo:(NSString *)to
+                   subject:(NSString *)subject
+                      body:(NSString *)body
+                      path:(NSString *)path
+     deleteFileOnCompleted:(BOOL)del
+{
     self = [super init];
     if (self)
     {
@@ -94,6 +103,7 @@ static NSString *globalPassword;
         self.subject = subject;
         self.body = body;
         self.path = path;
+        self.deleteFileOnCompleted = del;
     }
     return self;
 }
@@ -155,6 +165,11 @@ static NSString *globalPassword;
 -(void)messageSent:(SKPSMTPMessage *)message
 {
     NSLog(@"mail sent");
+    if(self.deleteFileOnCompleted && self.path)
+    {
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        [fileManager removeItemAtPath:self.path error:nil];
+    }
     [self completeOperation];
 }
 
