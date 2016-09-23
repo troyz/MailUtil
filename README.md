@@ -5,11 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/MailUtil.svg?style=flat)](http://cocoapods.org/pods/MailUtil)
 [![Platform](https://img.shields.io/cocoapods/p/MailUtil.svg?style=flat)](http://cocoapods.org/pods/MailUtil)
 
+## Introduction
+As you known, [`skpsmtpmessage`](https://github.com/jetseven/skpsmtpmessage) could not send email in concurrent order. `MailUtil` is a tool that wrap `skpsmtpmessage` to send emails in serial order.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+`iOS7+`
 
 ## Installation
 
@@ -17,7 +21,7 @@ MailUtil is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MailUtil"
+pod "MailUtil", :git => 'https://github.com/troyz/MailUtil.git', :tag => '0.1.0'
 ```
 
 ## Author
