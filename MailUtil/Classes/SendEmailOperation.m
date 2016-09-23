@@ -122,6 +122,8 @@ static NSString *globalPassword;
         NSLog(@"#############Please check if your mail password is correct!!!#############");
     }
     
+    _body = _body ? _body : @"";
+    
     SKPSMTPMessage *testMsg = [[SKPSMTPMessage alloc] init];
     testMsg.fromEmail = self.fromEmail;
     testMsg.toEmail = self.to;
@@ -143,15 +145,27 @@ static NSString *globalPassword;
         
         NSData *vcfData = [NSData dataWithContentsOfFile:self.path];
         
-        NSString *contentType = [NSString stringWithFormat:@"text/directory;\r\n\tx-unix-mode=0644;\r\n\tname=\"%@\"", fileName];
-        NSString *attachment = [NSString stringWithFormat:@"attachment;\r\n\tfilename=\"%@\"", fileName];
-        
-        NSDictionary *vcfPart = [NSDictionary dictionaryWithObjectsAndKeys:contentType,kSKPSMTPPartContentTypeKey,
-                                 attachment,kSKPSMTPPartContentDispositionKey,[vcfData encodeBase64ForData],kSKPSMTPPartMessageKey,@"base64",kSKPSMTPPartContentTransferEncodingKey,nil];
-        
-        testMsg.parts = [NSArray arrayWithObjects:plainPart,vcfPart,nil];
-        
-        [fileManager removeItemAtPath:self.path error:nil];
+        // 附件是否作为邮件正文发送？
+        if(self.attachmentUseAsMailContent)
+        {
+            NSString *fileContent = [[NSString alloc] initWithData:vcfData encoding:NSUTF8StringEncoding];
+            _body = [NSString stringWithFormat:@"%@\n\n%@", _body, fileContent];
+            plainPart = [NSDictionary dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey,
+                         _body,kSKPSMTPPartMessageKey,@"8bit",kSKPSMTPPartContentTransferEncodingKey,nil];
+            testMsg.parts = [NSArray arrayWithObjects:plainPart,nil];
+        }
+        else
+        {
+            NSString *contentType = [NSString stringWithFormat:@"text/directory;\r\n\tx-unix-mode=0644;\r\n\tname=\"%@\"", fileName];
+            NSString *attachment = [NSString stringWithFormat:@"attachment;\r\n\tfilename=\"%@\"", fileName];
+            
+            NSDictionary *vcfPart = [NSDictionary dictionaryWithObjectsAndKeys:contentType,kSKPSMTPPartContentTypeKey,
+                                     attachment,kSKPSMTPPartContentDispositionKey,[vcfData encodeBase64ForData],kSKPSMTPPartMessageKey,@"base64",kSKPSMTPPartContentTransferEncodingKey,nil];
+            
+            testMsg.parts = [NSArray arrayWithObjects:plainPart,vcfPart,nil];
+            
+            [fileManager removeItemAtPath:self.path error:nil];
+        }
     }
     else
     {

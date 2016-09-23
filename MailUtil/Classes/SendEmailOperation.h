@@ -18,6 +18,8 @@
 
 // 是否在邮件发送成功后删除path对应的文件，默认为NO
 @property (nonatomic, assign) BOOL deleteFileOnCompleted;
+// 附件内容作为邮件正文发送
+@property (nonatomic, assign) BOOL attachmentUseAsMailContent;
 
 // 如果没有设置，则用全局的。
 @property (nonatomic, copy) NSString *mailServer;
